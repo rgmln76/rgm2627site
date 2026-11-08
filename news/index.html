@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta name="google-site-verification" content="CnYI3PyfMwYnZFPclQxvow01cyWtFgZ9UyydR4-2rXI" />
+    <link rel="icon" type="image/jpeg" href="../assets/images/logo.jpg" />
+    <link rel="apple-touch-icon" href="../assets/images/logo.jpg" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Berita dan informasi terkini seputar kegiatan, program, dan pengumuman resmi Rijaalul Ghad Mu'allimin (RGM) MA Persis 76 Tarogong.">
+    <meta name="theme-color" content="#1a2744">
+    <title>Berita &amp; Informasi | RIJAALUL GHAD MU'ALLIMIN - MA Persis 76 Tarogong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/improvements.css">
+    <link rel="stylesheet" href="../css/dark.css">
+    <link rel="stylesheet" href="../css/theme-switch.css">
+    <script src="../js/theme.js"></script>
+    <link rel="stylesheet" href="news.css">
+</head>
+
+<body>
+<!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.jpg"
+                    alt="RGM Logo">
+                <span>RIJAALUL GHAD<small>MU'ALLIMIN PERSIS 76</small></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#beranda">Beranda</a></li>
+                <li><a href="../index.html#visimisi">Visi & Misi</a></li>
+                <li><a href="../index.html#tentang">Tentang</a></li>
+                <li><a href="../index.html#program">Program</a></li>
+                <li><a href="../index.html#galeri">Galeri</a></li>
+                <li><a href="../index.html#tim">Struktur</a></li>
+                <li><a href="../index.html#kontak">Kontak</a></li>
+                <li><a href="index.html" class="active"><i class="fas fa-newspaper"></i> Berita</a></li>
+                <li><a href="https://www.instagram.com/rgmppi76_" target="_blank" class="nav-cta"><i
+                            class="fab fa-instagram"></i> Follow Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Buka menu"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html#beranda">Beranda</a></li>
+            <li><a href="../index.html#visimisi">Visi & Misi</a></li>
+            <li><a href="../index.html#tentang">Tentang Kami</a></li>
+            <li><a href="../index.html#program">Program</a></li>
+            <li><a href="../index.html#galeri">Galeri</a></li>
+            <li><a href="../index.html#tim">Struktur</a></li>
+            <li><a href="../index.html#kontak">Kontak</a></li>
+            <li><a href="index.html" class="active"><i class="fas fa-newspaper"></i> Berita Terbaru</a></li>
+        </ul>
+        <a href="https://www.instagram.com/rgmppi76_" target="_blank" class="mobile-nav-cta"><i
+                class="fab fa-instagram"></i> Follow Instagram</a>
+    </div>
+
+<div id="berita-section">
+  <div class="berita-hero">
+    <div class="berita-hero-inner">
+      <div class="breadcrumb">
+        <a href="../index.html"><i class="fas fa-home"></i> Beranda</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Berita Terbaru</span>
+      </div>
+      <h1>Berita &amp; <span>Informasi</span></h1>
+      <p>Informasi terkini seputar kegiatan, program, dan pengumuman resmi dari Rijaalul Ghad Mu'allimin MA Persis 76 Tarogong.</p>
+    </div>
+  </div>
+  <main class="berita-main">
+    
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="Pengumuman Resmi">Pengumuman</button>
+      <button class="filter-btn" data-filter="Organisasi">Organisasi</button>
+      <button class="filter-btn" data-filter="Olahraga">Olahraga</button>
+      <button class="filter-btn" data-filter="Seminar">Seminar</button>
+      <button class="filter-btn" data-filter="Pemilihan">Pemilihan</button>
+    </div>
+
+    <div class="email-note">
+      <i class="fas fa-envelope-open-text"></i>
+      <p><strong>Sumber Berita:</strong> Konten berita bersumber dari email resmi organisasi <strong>rgmln76@gmail.com</strong>.</p>
+    </div>
+
+    <div class="featured-section">
+      <div class="section-label"><i class="fas fa-star"></i> Berita Utama</div>
+      <div class="featured-card" data-category="Pengumuman Resmi">
+        <div class="featured-img">
+          <img src="../assets/images/program-pelantikan.jpg" alt="Pelantikan Kepengurusan RGM" decoding="async" fetchpriority="high">
+          <div class="featured-img-overlay"></div>
+          <span class="featured-badge">&#128204; Terbaru</span>
+          <span class="featured-date-tag"><i class="fas fa-calendar-alt"></i> 01 Oktober 2025</span>
+        </div>
+        <div class="featured-body">
+          <span class="featured-category"><i class="fas fa-bullhorn"></i> Pengumuman Resmi</span>
+          <h2>Pelantikan Kepengurusan RGM Periode 2025&#8211;2026 Resmi Dilaksanakan</h2>
+          <p>Pelantikan kepengurusan baru Rijaalul Ghad Mu'allimin (RGM) MA Persis 76 Tarogong periode 2025&#8211;2026 telah resmi dilaksanakan. Seluruh pengurus baru siap mengemban amanah.</p>
+          <div class="featured-meta">
+            <span><i class="fas fa-user"></i> Admin RGM</span>
+            <span><i class="fas fa-eye"></i> 248 dilihat</span>
+            <span><i class="fas fa-clock"></i> 3 min read</span>
+          </div>
+          <a href="#" class="btn-read"><i class="fas fa-book-open"></i> Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-divider"><span>Semua Berita</span></div>
+    
+    <div class="news-grid" id="newsGrid">
+      <div class="news-card" data-category="Pemilihan">
+        <div class="news-img"><img src="../assets/images/news-debat.jpg" alt="Debat Paslon" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Pemilihan</span></div>
+        <div class="news-body"><h3>Debat Paslon Ketua RGM: Adu Gagasan untuk Masa Depan Organisasi</h3><p>Calon-calon ketua RGM beradu visi dan gagasan dalam sesi debat terbuka yang disaksikan seluruh santri.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 8 September 2025 &nbsp;|&nbsp; ⏱️ 4 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="news-card" data-category="Olahraga">
+        <div class="news-img"><img src="../assets/images/program-league.jpg" alt="RGM League" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Olahraga</span></div>
+        <div class="news-body"><h3>RGM League 2026 Resmi Dibuka, Antusias Santri Membludak</h3><p>Program tahunan RGM League kembali hadir dengan format baru, diikuti lebih dari 20 tim.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 25 Januari 2026 &nbsp;|&nbsp; ⏱️ 2 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="news-card" data-category="Seminar">
+        <div class="news-img"><img src="../assets/images/program-sigma.jpg" alt="Seminar Sigma" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Seminar</span></div>
+        <div class="news-body"><h3>Seminar Sigma RGM: Membangun Pola Pikir Santri yang Visioner</h3><p>Seminar menghadirkan narasumber inspiratif untuk membentuk pola pikir santri yang visioner.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 29 November 2025 &nbsp;|&nbsp; ⏱️ 5 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="news-card" data-category="Organisasi">
+        <div class="news-img"><img src="../assets/images/program-musyker.jpg" alt="Musyawarah Kerja" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Organisasi</span></div>
+        <div class="news-body"><h3>Musyawarah Kerja RGM 2026: Menyusun Program Unggulan Setahun ke Depan</h3><p>Seluruh pengurus merancang program-program unggulan yang akan dilaksanakan sepanjang tahun 2026.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 19 Oktober 2025 &nbsp;|&nbsp; ⏱️ 3 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="news-card" data-category="Seminar">
+        <div class="news-img"><img src="../assets/images/news-berkendara.jpg" alt="Seminar Berkendara" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Seminar</span></div>
+        <div class="news-body"><h3>Seminar Keselamatan Berkendara: RGM Peduli Keselamatan Santri</h3><p>RGM menggelar seminar keselamatan berkendara untuk meningkatkan kesadaran tertib berlalu lintas.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 11 Oktober 2025 &nbsp;|&nbsp; ⏱️ 2 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="news-card" data-category="Olahraga">
+        <div class="news-img"><img src="../assets/images/program-running.jpg" alt="RGM Running" loading="lazy" decoding="async"><div class="news-img-overlay"></div><span class="news-cat">Olahraga</span></div>
+        <div class="news-body"><h3>RGM Running: Santri Sehat, Semangat Berprestasi Semakin Kuat</h3><p>Kegiatan lari bersama digelar sebagai bentuk komitmen menjaga kesehatan para santri.</p><div class="news-footer"><span class="news-date"><i class="fas fa-calendar"></i> 16 November 2025 &nbsp;|&nbsp; ⏱️ 2 min read</span><a href="#" class="news-link">Selengkapnya <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+    </div>
+    
+    <div class="newsletter-premium">
+      <h3><i class="fas fa-envelope-open-text" style="color:#f5a623; margin-right:8px;"></i> Dapatkan Berita Terbaru</h3>
+      <p>Daftarkan email kamu untuk mendapatkan notifikasi eksklusif dan berita terbaru langsung dari RGM.</p>
+      <form class="newsletter-form-premium" id="newsletterPremiumForm">
+        <input type="email" name="Email" placeholder="Masukkan email kamu..." required>
+        <button type="submit">Daftar Sekarang <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </main>
+</div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/forms.js"></script>
+    <script src="news.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --cream: #0f1a31;
+    --cream-dark: #22304f;
+    --text-dark: #f1f5fb;
+    --text-body: #c5cddd;
+    --text-light: #97a3bb;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+:where(html[data-theme="dark"]) body { background: #0b1120; }
+:where(html[data-theme="dark"]) .blob { opacity: 0.4; }
+:where(html[data-theme="dark"]) .about,
+:where(html[data-theme="dark"]) .team { background: rgba(11, 17, 32, 0.62) !important; }
+:where(html[data-theme="dark"]) .gallery { background: rgba(15, 26, 49, 0.62) !important; }
+:where(html[data-theme="dark"]) .contact { background: #0b1120; }
+
+:where(html[data-theme="dark"]) :is(.visimisi, .about, .team, .gallery, .contact) .section-falling-logo { opacity: 0.03; }
+
+:where(html[data-theme="dark"]) .staff-card,
+:where(html[data-theme="dark"]) .team-card,
+:where(html[data-theme="dark"]) .visimisi-card,
+:where(html[data-theme="dark"]) .hero-float-card,
+:where(html[data-theme="dark"]) .contact-form {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(255, 255, 255, 0.03) !important;
+}
+:where(html[data-theme="dark"]) .staff-card:hover,
+:where(html[data-theme="dark"]) .team-card:hover,
+:where(html[data-theme="dark"]) .visimisi-card:hover,
+:where(html[data-theme="dark"]) .hero-float-card:hover,
+:where(html[data-theme="dark"]) .contact-form:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04)) !important;
+    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.45), inset 0 0 15px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ---------- Elemen di section terang ---------- */
+:where(html[data-theme="dark"]) .about-img-small { border-color: #16223c; }
+:where(html[data-theme="dark"]) .float-icon.gold { background: rgba(245, 166, 35, 0.16); }
+:where(html[data-theme="dark"]) .float-icon.navy { background: rgba(255, 255, 255, 0.1); color: #e8ecf4; }
+
+:where(html[data-theme="dark"]) .visimisi .section-tag,
+:where(html[data-theme="dark"]) .about .section-tag,
+:where(html[data-theme="dark"]) .team .section-tag,
+:where(html[data-theme="dark"]) .gallery .section-tag,
+:where(html[data-theme="dark"]) .contact .section-tag { color: var(--gold); }
+
+:where(html[data-theme="dark"]) .visimisi-card h3 { color: var(--text-dark); }
+:where(html[data-theme="dark"]) .team-body p,
+:where(html[data-theme="dark"]) .staff-body p { color: var(--gold); }
+
+:where(html[data-theme="dark"]) .contact-social a { color: #e8ecf4; }
+
+:where(html[data-theme="dark"]) .form-group input,
+:where(html[data-theme="dark"]) .form-group textarea,
+:where(html[data-theme="dark"]) .form-group select { background: #0d1527; }
+
+/* ---------- Menu mobile ---------- */
+:where(html[data-theme="dark"]) .mobile-menu { background: #101a30; box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5); }
+:where(html[data-theme="dark"]) .mobile-nav-links a:hover { color: var(--gold); }
+
+/* ---------- Halaman Berita (news/) ---------- */
+:where(html[data-theme="dark"]) .filter-btn {
+    background: #141f38;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #c5cddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+:where(html[data-theme="dark"]) .filter-btn:hover { background: #1a2744; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35); }
+
+:where(html[data-theme="dark"]) .section-label { color: #e8ecf4; }
+
+:where(html[data-theme="dark"]) .featured-card {
+    background: #141f38;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+:where(html[data-theme="dark"]) .featured-category { background: rgba(91, 127, 255, 0.16); color: #9db4ff; }
+:where(html[data-theme="dark"]) .featured-body h2 { color: #f1f5fb; }
+:where(html[data-theme="dark"]) .featured-body p { color: #c5cddd; }
+:where(html[data-theme="dark"]) .featured-meta span { color: #97a3bb; }
+:where(html[data-theme="dark"]) .btn-read { background: #2d3e5f; }
+
+:where(html[data-theme="dark"]) .news-card {
+    background: #141f38;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+:where(html[data-theme="dark"]) .news-body h3 { color: #f1f5fb; }
+:where(html[data-theme="dark"]) .news-body p { color: #97a3bb; }
+:where(html[data-theme="dark"]) .news-footer { border-top-color: rgba(255, 255, 255, 0.08); }
+:where(html[data-theme="dark"]) .news-date { color: #97a3bb; }
+:where(html[data-theme="dark"]) .news-link { color: #e8ecf4; }
+
+:where(html[data-theme="dark"]) .email-note {
+    background: linear-gradient(135deg, #16223c 0%, #101a30 100%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+:where(html[data-theme="dark"]) .email-note p { color: #c5cddd; }
+
+:where(html[data-theme="dark"]) .section-divider span { color: #e8ecf4; }
+:where(html[data-theme="dark"]) .section-divider::before,
+:where(html[data-theme="dark"]) .section-divider::after { background: rgba(255, 255, 255, 0.12); }

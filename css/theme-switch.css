@@ -1,0 +1,77 @@
+.theme-switch {
+    position: fixed;
+    z-index: 9999;
+    right: 30px;
+    bottom: 42px;
+    width: 72px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid var(--gold, #f5a623);
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--navy-light, #2d3e5f) 0%, var(--navy, #1a2744) 100%);
+    box-shadow: 0 6px 20px rgba(245, 166, 35, 0.3), inset 0 0 10px rgba(245, 166, 35, 0.1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.wa-float ~ .theme-switch { right: 106px; }
+
+.theme-switch:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(245, 166, 35, 0.5), 0 0 0 6px rgba(245, 166, 35, 0.15);
+}
+.theme-switch:active { transform: scale(0.96); }
+
+.theme-switch-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold, #f5a623) 0%, var(--gold-light, #f7b84e) 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+html[data-theme="dark"] .theme-switch-knob { transform: translateX(36px); }
+
+/* Icons */
+.ts-icon {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    z-index: 1;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+.ts-sun  { left: 8px;  color: var(--navy, #1a2744); }
+.ts-moon { right: 8px; color: rgba(255, 255, 255, 0.65); }
+html[data-theme="dark"] .ts-sun  { color: rgba(255, 255, 255, 0.65); }
+html[data-theme="dark"] .ts-moon { color: var(--navy, #1a2744); }
+
+/* Transitions */
+html.theme-anim *:not(.theme-switch):not(.theme-switch *),
+html.theme-anim *:not(.theme-switch):not(.theme-switch *)::before,
+html.theme-anim *:not(.theme-switch):not(.theme-switch *)::after {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease,
+                box-shadow 0.35s ease, fill 0.35s ease !important;
+}
+
+@media (max-width: 600px) {
+    .theme-switch { right: 20px; bottom: 31px; width: 64px; height: 32px; }
+    .wa-float ~ .theme-switch { right: 86px; }
+    .theme-switch-knob { top: 3px; left: 3px; width: 22px; height: 22px; }
+    html[data-theme="dark"] .theme-switch-knob { transform: translateX(32px); }
+    .ts-icon { width: 14px; height: 14px; margin-top: -7px; }
+    .ts-sun  { left: 7px; }
+    .ts-moon { right: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .theme-switch, .theme-switch-knob, .ts-icon { transition: none; }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#1a2744">
+    <title>Situs Dalam Perawatan | Rijaalul Ghad Mu'allimin Official Website</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/improvements.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+    <script src="js/theme.js" data-switch="off"></script>
+
+    <link rel="icon" href="assets/icons/favicon.ico">
+
+</head>
+
+<body>
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="maintenance">
+        <picture class="maint-visual">
+            <source media="(prefers-reduced-motion: reduce)" srcset="assets/maintenance/loading-static.png">
+            <img src="assets/maintenance/loading.gif" width="160" height="160">
+        </picture>
+
+        <h1>Situs sedang dalam <span>perawatan</span></h1>
+        <h3>mohon untuk kembali saat situs sudah selesai diperbaiki</h3>
+        <p>Situs sedang dirawat untuk improvisasi dan penambahan fitur, jika berkenan, anda bisa menerima notifikasi dari kami saat situs siap untuk dikunjungi kembali.</p>
+
+        <button type="button" class="btn btn-primary" id="notifyOpen" aria-haspopup="dialog">
+            <i class="fas fa-bell"></i> Ingatkan saya
+        </button>
+    </main>
+
+    <dialog id="notifyDialog" class="notify" aria-labelledby="notifyTitle" aria-describedby="notifyDesc">
+        <div class="notify-panel">
+            <form id="notifyForm" novalidate>
+                <h2 id="notifyTitle">Dapatkan notifikasi</h2>
+                <p id="notifyDesc">Masukkan email Anda. Kami akan mengabari saat situs sudah bisa dikunjungi kembali.</p>
+
+                <div class="form-group">
+                    <label for="notifyEmail">Email</label>
+                    <input type="email" id="notifyEmail" name="email" inputmode="email" autocomplete="email" placeholder="email@rgmppi76.com" required>
+                    <p class="notify-error" id="notifyError" role="alert" hidden></p>
+                </div>
+
+                <input type="text" name="_honey" class="notify-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <input type="hidden" name="message" value="Mohon beritahu saya saat situs sudah bisa dikunjungi kembali.">
+
+                <div class="notify-actions">
+                    <button type="button" class="btn btn-ghost" id="notifyCancel">Batal</button>
+                    <button type="submit" class="btn btn-primary" id="notifySubmit">Kirim</button>
+                </div>
+            </form>
+
+            <div class="notify-done" id="notifyDone" hidden>
+                <div class="notify-check"><i class="fas fa-check"></i></div>
+                <h2>Terima kasih!</h2>
+                <p>Email Anda sudah kami catat. Kami akan mengabari saat situs siap dikunjungi kembali.</p>
+                <button type="button" class="btn btn-primary" id="notifyClose">Tutup</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="js/forms.js"></script>
+    <script src="js/maintenance.js"></script>
+</body>
+
+</html>

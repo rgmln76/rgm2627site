@@ -1,0 +1,147 @@
+.maintenance {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.maint-visual { display: block; margin-bottom: 36px; }
+.maint-visual img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    box-shadow: 0 18px 44px rgba(26, 39, 68, 0.28), 0 0 0 6px rgba(245, 166, 35, 0.16);
+}
+
+.maintenance h1 {
+    font-size: clamp(2rem, 6vw, 3.3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+.maintenance h1 span {
+    background: linear-gradient(transparent 62%, rgba(245, 166, 35, 0.4) 62%);
+    padding: 0 4px;
+}
+.maintenance h3 {
+    font-size: clamp(1.02rem, 2.4vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--text-body);
+    margin-bottom: 18px;
+}
+.maintenance p {
+    max-width: 560px;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-light);
+    margin-bottom: 32px;
+}
+
+.notify {
+    width: 440px;
+    max-width: calc(100vw - 32px);
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--text-body);
+    overflow: visible;
+}
+.notify::backdrop {
+    background: rgba(10, 15, 30, 0.55);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+.notify[open] { animation: notifyIn 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
+@keyframes notifyIn {
+    from { opacity: 0; transform: translateY(14px) scale(0.97); }
+    to   { opacity: 1; transform: none; }
+}
+html:has(dialog[open]) { overflow: hidden; }
+
+.notify-panel {
+    background: var(--white);
+    border-radius: 22px;
+    border-top: 4px solid var(--gold);
+    padding: 30px 30px 28px;
+    box-shadow: var(--shadow-lg), 0 30px 70px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+.notify h2 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+.notify p {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 22px;
+}
+.notify .form-group { margin-bottom: 8px; }
+.notify .form-group input[aria-invalid="true"] { border-color: #e5484d; }
+.notify .form-group input[aria-invalid="true"]:focus { box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.12); }
+.notify p.notify-error {
+    margin: 8px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #d6393f;
+}
+.notify-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.notify-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 22px;
+}
+.notify .btn { padding: 12px 26px; font-size: 0.95rem; justify-content: center; }
+.btn-ghost {
+    background: transparent;
+    color: var(--text-dark);
+    box-shadow: inset 0 0 0 2px var(--cream-dark);
+}
+.btn-ghost:hover { box-shadow: inset 0 0 0 2px var(--gold); color: var(--text-dark); }
+.notify .btn:disabled { opacity: 0.7; cursor: progress; transform: none; box-shadow: none; }
+
+.notify-done { text-align: center; padding: 6px 0 2px; }
+.notify-done p { margin-bottom: 24px; }
+.notify-check {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    color: var(--navy);
+    background: var(--gold);
+    box-shadow: 0 0 0 8px rgba(245, 166, 35, 0.18);
+}
+
+html[data-theme="dark"] .maint-visual img { box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55), 0 0 0 6px rgba(245, 166, 35, 0.2); }
+html[data-theme="dark"] .notify-panel {
+    background: #101a30;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+    outline: 1px solid rgba(255, 255, 255, 0.08);
+}
+html[data-theme="dark"] .notify p.notify-error { color: #ff8a8f; }
+
+@media (max-width: 480px) {
+    .notify-panel { padding: 26px 22px 24px; }
+    .notify-actions .btn { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .notify[open] { animation: none; }
+}

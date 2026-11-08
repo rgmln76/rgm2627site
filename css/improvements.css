@@ -1,0 +1,13 @@
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible,
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #f5a623;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+.hero-logo-wrapper {
+    cursor: grab;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.hero-logo-wrapper.dragging { cursor: grabbing; }
