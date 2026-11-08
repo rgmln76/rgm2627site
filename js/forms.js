@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/rgmln76@gmail.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/rgmln76@gmail.com';
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
