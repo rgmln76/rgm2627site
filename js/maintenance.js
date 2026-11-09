@@ -1,4 +1,5 @@
-(function () {
+(
+    function () {
     const dialog = document.getElementById('notifyDialog');
     const openBtn = document.getElementById('notifyOpen');
     const form = document.getElementById('notifyForm');
@@ -57,7 +58,7 @@
         e.preventDefault();
         const email = emailInput.value.trim();
         if (!EMAIL_RE.test(email)) {
-            showError('Masukkan alamat email yang valid, contoh: nama@rgmppi76.com');
+            showError('Masukkan alamat email yang valid, contoh: nama@email.com');
             emailInput.focus();
             return;
         }
@@ -66,15 +67,15 @@
         try {
             const data = new FormData(form);
             data.set('email', email);
-            data.append('_subject', 'ready');
+            data.append('_subject', 'Remind Me - RGM');
             const res = await fetch(FORM_ENDPOINT, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
             const json = await res.json().catch(function () { return {}; });
-            if (!res.ok || String(json.success) === 'false') throw new Error('failed');
+            if (!res.ok || String(json.success) === 'false') throw new Error('gagal kirim');
             form.hidden = true;
             doneBox.hidden = false;
             closeBtn.focus();
         } catch (err) {
-            showError('Maaf, email tidak ter-submit. Mohon periksa koneksi internet Anda lalu coba lagi.');
+            showError('Maaf, email tidak berhasil terkirim. Periksa koneksi internet Anda lalu coba lagi.');
             emailInput.focus();
         } finally {
             setLoading(false);
